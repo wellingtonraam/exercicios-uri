@@ -1,15 +1,15 @@
 /**
-Diferen�a
+Cálculo Simples
 Adaptado por Neilor Tonin, URI  Brasil
-1
+
 Timelimit: 1
-Leia quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferen�a do produto de A e B pelo produto de C e D segundo a f�rmula: DIFERENCA = (A * B - C * D).
+Neste problema, deve-se ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Após, calcule e mostre o valor a ser pago.
 
 Entrada
-O arquivo de entrada cont�m 4 valores inteiros.
+O arquivo de entrada contém duas linhas de dados. Em cada linha haverá 3 valores, respectivamente dois inteiros e um valor com 2 casas decimais.
 
-Sa�da
-Imprima a mensagem DIFERENCA com todas as letras mai�sculas, conforme exemplo abaixo, com um espa�o em branco antes e depois da igualdade.
+Saída
+A saída deverá ser uma mensagem conforme o exemplo fornecido abaixo, lembrando de deixar um espaço após os dois pontos e um espaço após o "R$". O valor deverá ser apresentado com 2 casas após o ponto.
 */
 
 
@@ -23,21 +23,23 @@ public class Main {
 
     public static void main(String args[]) {
 
- Scanner in = new Scanner (System.in);
+     int cod, qtd;
+        double preco, total;
         
-int dif,a,b,c,d;
+        Scanner in = new Scanner(System.in);
         
-a = in.nextInt();
+        cod = in.nextInt();
+        qtd = in.nextInt();
+        preco = in.nextDouble();
+        total = qtd * preco;
         
-b = in.nextInt();
+        cod = in.nextInt();
+        qtd = in.nextInt();
+        preco = in.nextDouble();
+        total += qtd * preco;
         
-c = in.nextInt();
         
-d = in.nextInt();
-        
-dif = ((a*b) - (c*d));
-        
-System.out.println("DIFERENCA = " + dif);  
+        System.out.println("VALOR A PAGAR: R$ " + total);
   }
 
 }
